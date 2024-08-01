@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alexia's Birthday</title>
+    <style>
+      body {
+        font-family: 'Arial, sans-serif';
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #f0f8ff;
+      }
+      header {
+        background-color: #ff7f50;
+        color: #fff;
+        text-align: center;
+        padding: 2rem;
+        font-size: 2rem;
+        animation: fadeIn 2s ease-in;
+      }
+      section {
+        padding: 2rem;
+        text-align: center;
+      }
+      .purpose, .description, .interests, .skills {
+        background-color: #f0f8ff;
+        color: #333;
+        margin: 1rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        animation: slideIn 1s ease-out;
+      }
+      .description {
+        background-color: #ffe4e1;
+      }
+      .interests {
+        background-color: #98fb98;
+      }
+      .skills {
+        background-color: #afeeee;
+      }
+      footer {
+        background-color: #ff7f50;
+        color: #fff;
+        text-align: center;
+        padding: 1rem;
+        font-size: 1rem;
+      }
+      .cake-container {
+        position: relative;
+        width: 200px;
+        height: 300px;
+        margin: 2rem auto;
+      }
+      .cake {
+        position: absolute;
+        bottom: 0;
+        width: 200px;
+        height: 150px;
+        background: linear-gradient(to bottom, #ff69b4, #ff1493);
+        border-radius: 100px 100px 0 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .cake::before {
+        content: '';
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background: #ffa07a;
+        border-radius: 50%;
+        top: -25px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .cake::after {
+        content: '';
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: #ff69b4;
+        border-radius: 50%;
+        top: -50px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .cake-name {
+        position: absolute;
+        width: 100%;
+        bottom: 10px;
+        font-family: 'Comic Sans MS, cursive, sans-serif';
+        font-size: 1.5rem;
+        color: #fff;
+        text-align: center;
+        text-shadow: 1px 1px 2px #000;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      @keyframes slideIn {
+        from {
+          transform: translateY(50px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      .birthday-message {
+        display: none;
+      }
+    </style>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const today = new Date();
+        const year = today.getFullYear();
+        const birthday = new Date(year, 7, 2); // August 2 of the current year
+        
+        if (today.getDate() === 2 && today.getMonth() === 7) {
+          document.querySelector('.birthday-message').style.display = 'block';
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <header>Welcome, Alexia!</header>
+    
+    <section class="purpose">
+      <h2>Purpose of the Website</h2>
+      <p>This website is dedicated to celebrating Alexia's 22nd birthday and showcasing her interests and skills.</p>
+    </section>
+    
+    <section class="description">
+      <h2>Birthday Celebration</h2>
+      <p class="birthday-message">Happy Birthday, Alexia! 🎉 You are now 22 years old! 🎂</p>
+      <div class="cake-container birthday-message">
+        <div class="cake">
+          <div class="cake-name">Alexia</div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="interests">
+      <h2>Alexia's Interests</h2>
+      <p>Alexia is passionate about acting and dreams of becoming a leading actress. She is also embarking on her journey in forensic science.</p>
+    </section>
+    
+    <section class="skills">
+      <h2>Skills</h2>
+      <p>Alexia has honed her skills as a Cafe Barista and currently serves as a Manager at McDonald's.</p>
+    </section>
+    
+    <footer>
+      <p>&copy; 2024 Alexia's Birthday Website. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
